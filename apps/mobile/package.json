@@ -1,7 +1,8 @@
 {
-  "name": "mobile-app",
+  "name": "mobile",
   "main": "expo-router/entry",
   "version": "1.0.0",
+  "private": true,
   "dependencies": {
     "@expo/ui": "~57.0.20",
     "expo": "~57.0.25",
@@ -29,7 +30,8 @@
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
-    "typescript": "~6.0.3"
+    "typescript": "~6.0.3",
+    "@pet-pals/shared": "workspace:*"
   },
   "scripts": {
     "start": "expo start",
@@ -39,5 +41,10 @@
     "web": "expo start --web",
     "lint": "expo lint"
   },
-  "private": true
+  "workspaces": {
+   "nohoist": [
+    "**/react-native",
+    "**/react-native/**"
+   ]
+  }
 }

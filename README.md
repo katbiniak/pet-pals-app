@@ -7,14 +7,21 @@ The Pet Pals booking experience on the website and on mobile applications. The w
 ## Technical Stack
 
 Typescript, Supabase, shadcn, Expo,
+- Pnpm 
 - Node v22.19.0
 
+## QuickStart
+
+- Uses pnpm install all dependencies from the root package.json
+- cd website and then pnpm dev to run the web locally
 
 ## Folder Structure
 
 <Insert tree diagram and details>
 
+## Known Issues
 
-
+- Home page has no real header structure which can cause potential SEO issues.
+- Color accessibility audit needed for buttons/text/hovers/etc.
 
 ## Future Additions
