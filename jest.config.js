@@ -6,6 +6,9 @@ export default {
   moduleNameMapper: {
     // Overrides TS explicit .js extensions back to local .ts files
     '^(\\.{1,2}/.*)\\.js$': '$1', 
+    '\\.(css|less|scss|sass)$': '<rootDir>/apps/website/__mocks__/fileMock.js',
+    '\\.(svg|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/apps/website/__mocks__/fileMock.js',
+    '^@/(.*)$': '<rootDir>/apps/website/$1'
   },
   transform: {
     '^.+\\.tsx?$': [
@@ -17,6 +20,7 @@ export default {
           module: 'ESNext',
           target: 'ES2022', // Needed for top-level await with jest.unstable_mockModule
           esModuleInterop: true,
+          jsx: 'react-jsx', // Compile JSX in .tsx tests/components
         },
       },
     ],
@@ -26,4 +30,8 @@ export default {
       NEXT_PUBLIC_SUPABASE_KEY: 'placeholder-anon-key-string',
     },
   },
+  testPathIgnorePatterns: [
+    "/node_modules/",
+    "\\.spec\\.ts$"
+  ],
 };

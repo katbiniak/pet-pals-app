@@ -62,7 +62,6 @@ export default function Create() {
         return;
       }
 
-      console.log("Validated Form Data Submitted:", data);
       form.reset(); // Clear the form
       setTotalPrice(0);
     }
@@ -79,7 +78,6 @@ export default function Create() {
         // Update price each time they are changed getting the latest values
         const currentAnimalType = values["animalType"];
         const currentHours = values["hours"];
-        console.log(currentAnimalType, currentHours);
         if (currentAnimalType && currentHours && currentHours <= 8 && currentHours >= 2) {
           calculateTotalPrice(currentAnimalType, currentHours);
         }
@@ -147,7 +145,7 @@ export default function Create() {
                   control={form.control}
                   render={({ field, fieldState }) => (
                     <Field>
-                      <FieldLabel >Animal Type</FieldLabel>
+                      <FieldLabel>Animal Type</FieldLabel>
                       <Select
                       value={field.value}
                       onValueChange={field.onChange}

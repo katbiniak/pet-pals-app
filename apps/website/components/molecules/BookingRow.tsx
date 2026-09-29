@@ -12,7 +12,6 @@ export const BookingRow: React.FC<BookingRowProps> =
   booking,
   className,
 }) => {
-  console.log(booking.service_date);
   const isExpired = booking.service_date ? dateExpired(booking.service_date) : true;
   const formattedAnimalType = booking.animal_type ? booking.animal_type.charAt(0).toUpperCase() + booking.animal_type.slice(1) : '';
 
@@ -20,7 +19,7 @@ export const BookingRow: React.FC<BookingRowProps> =
     return (
       <p className="w-1/2 text-charcoal text-base">{text}</p>
     );
-  }
+  };
 
   return (
     <div className={cn(`w-full flex flex-col justify-center items-center gap-8 border-t border-t-blossom`, className)}>

@@ -298,3 +298,10 @@ Temporary Items
 .apdisk
 
 # End of https://www.toptal.com/developers/gitignore/api/reactnative,nextjs,react
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
