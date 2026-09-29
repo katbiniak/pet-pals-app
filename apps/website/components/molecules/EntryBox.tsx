@@ -19,7 +19,9 @@ export const EntryBox: React.FC<EntryBoxProps> =
         <Button buttonVariant='primary'>
           <Link href="/create">+ New Booking</Link>
         </Button>
-        <Button text="Admin Login" buttonVariant='secondary' />
+        <Button buttonVariant='secondary' >
+          <Link href="/bookings">Admin Login</Link>
+        </Button>
       </div>
     </div>
   );
