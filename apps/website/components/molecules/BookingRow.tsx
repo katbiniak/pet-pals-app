@@ -12,7 +12,7 @@ export const BookingRow: React.FC<BookingRowProps> =
   booking,
   className,
 }) => {
-
+  console.log(booking.service_date);
   const isExpired = booking.service_date ? dateExpired(booking.service_date) : true;
   const formattedAnimalType = booking.animal_type ? booking.animal_type.charAt(0).toUpperCase() + booking.animal_type.slice(1) : '';
 

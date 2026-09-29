@@ -1,5 +1,21 @@
 {
    "private": true,
    "name": "pet-pals",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "type": "module",
+   "scripts": {
+      "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+   },
+   "devDependencies": {
+      "jest": "^30.5.2",
+      "typescript": "^6.0.3",
+      "@testing-library/react":"^16.3.3",
+      "@testing-library/jest-dom":"^7.0.1",
+      "@types/jest":"^30.0.0",
+      "ts-jest":"^29.4.14",
+      "@jest/globals":"^30.5.2",
+      "jest-environment-jsdom":"^30.5.2",
+      "@types/node":"^26.6.3",
+      "ts-node":"^10.9.2"
+   }
 }

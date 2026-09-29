@@ -23,7 +23,7 @@ export function useGetPricing() {
       base: price.base,
       hourly: price.hourly,
     } as Price)) || [];
-    console.log(pricesData);
+
     return pricesData;
   }
 
