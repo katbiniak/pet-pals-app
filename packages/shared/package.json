@@ -1,5 +1,14 @@
 {
   "name": "@pet-pals/shared",
-  "version": "1.0.0",
-  "main": "index.ts"
+  "version": "1.0.4",
+  "main": "index.ts",
+  "dependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@supabase/supabase-js":"^2.117.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19"
+  }
 }
