@@ -31,7 +31,7 @@ The .env needs to be added to the root of each project for supabase usage at thi
 - `/apps/mobile/.env`
 - `/packages/shared/.env`
 
-Example .env needs the Supabase Api Key:
+Example .env needs the Supabase Api Key (both keys are the same value):
 ```
 NEXT_PUBLIC_SUPABASE_KEY="XXX"
 EXPO_PUBLIC_SUPABASE_KEY="XXX"
