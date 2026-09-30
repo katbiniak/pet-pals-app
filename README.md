@@ -33,7 +33,8 @@ The .env needs to be added to the root of each project for supabase usage at thi
 
 Example .env needs the Supabase Api Key:
 ```
-NEXT_PUBLIC_SUPABASE_KEY="sb_publishable_OOKBkjZbqPJKe9icv-1ekQ_j7D6xISY"
+NEXT_PUBLIC_SUPABASE_KEY="XXX"
+EXPO_PUBLIC_SUPABASE_KEY="XXX"
 ```
 
 ### Website
@@ -44,6 +45,17 @@ Go to the root of the web project to run the website locally
 cd apps/website
 pnpm dev
 ```
+
+### Mobile
+
+Go to the root of the mobile project to run Expo Go.
+
+```
+cd apps/mobile
+npx expo start --clear
+```
+
+Choose ios or android simulator and the application will install Expo Go and Launch.
 
 ### Tests
 
@@ -59,21 +71,23 @@ Playwright
 npm run test-ui
 ```
 
-### Mobile
-
-TBD
-
-
 ## Folder Structure
 
 This project is setup like a monorepo and includes hoisted node modules. Basic folder structure can be reviewed below:
 
 ```
 ├── apps
-│   ├── mobile ( TBD )
+│   ├── mobile
+│   │   ├── src
+│   │   │   ├── app (Expo routing pages + layouts)
+│   │   │   ├── constants
+│   │   │   └── components (atomic design components)
+│   │   │       ├── atoms
+│   │   │       └── molecules
+│   │   ├── assets
 │   │   ├── app.json
 │   │   ├── package.json
-│   │   ├── README.md
+│   │   └── README.md
 │   └── website
 │       ├── app (NextJS routing pages + layouts)
 │       ├── components (atomic design components)
@@ -82,7 +96,7 @@ This project is setup like a monorepo and includes hoisted node modules. Basic f
 │       ├── public (Asset files)
 │       ├── utils
 │       ├── package.json
-│       ├── README.md
+│       └── README.md
 ├── packages
 │   └── shared
 │       ├── hooks
@@ -118,3 +132,4 @@ This project is setup like a monorepo and includes hoisted node modules. Basic f
 - Confirmation messaging when booking is done (mocked up in designs)
 - User accounts to store pet information and be able to look up bookings made
 - Calendar view for bookings
+- Easier .env setup using potentially dotenv so it can be referenced in one location instead of 3
