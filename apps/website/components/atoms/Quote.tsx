@@ -14,8 +14,8 @@ export const Quote: React.FC<QuoteProps> =
 }) => {
   return (
     <div className={cn(`bg-blossom w-full h-full flex flex-col justify-center items-center p-11 text-charcoal text-4xl text-center italic gap-2`, className)}>
-      <p className="lg:max-w-60 w-full">{`"${text}"`}</p>
-      <p> - {name} </p>
+      {text && <p className="lg:max-w-60 w-full">{`"${text}"`}</p>}
+      {name && <p>{`- ${name}`}</p>}
     </div>
   );
 }

@@ -9,6 +9,7 @@ export function useGetBookings() {
   const [fetchError, setFetchError] = React.useState('');
 
   React.useEffect(() => {
+    console.log('get bookings calling!');
     getBookings();
   },[]);
 
@@ -34,7 +35,7 @@ export function useGetBookings() {
       'total_price': booking.total_price,
       completed: booking.completed
     } as Booking)) || [];
-    
+    console.log(bookings);
     setBookings(bookingsData)
   }
 

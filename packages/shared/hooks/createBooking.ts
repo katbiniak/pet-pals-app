@@ -2,7 +2,7 @@
 
 import React from "react";
 import { supabase } from "../lib/supabaseClient";
-import { Animal, Booking } from "../types/global";
+import { Booking } from "../types/global";
 
 export function useCreateBooking() {
   const [fetchError, setFetchError] = React.useState('');
