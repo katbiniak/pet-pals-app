@@ -71,7 +71,7 @@ Playwright
 npm run test-ui
 ```
 
-## Folder Structure
+## Folder & Database Structure
 
 This project is setup like a monorepo and includes hoisted node modules. Basic folder structure can be reviewed below:
 
@@ -111,6 +111,11 @@ This project is setup like a monorepo and includes hoisted node modules. Basic f
 ├── .gitignore
 └── README.md
 ```
+
+Supabase database setup:
+
+<img width="711" height="862" alt="Screenshot 2026-09-29 at 6 40 46 PM" src="https://github.com/user-attachments/assets/6c85044d-359a-41ab-9e7c-b2b512649876" />
+
 
 ## Notes
 
